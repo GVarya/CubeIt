@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextCubeName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите название куба"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <EditText
+        android:id="@+id/editTextTemplateText"
+        android:layout_width="300dp"
+        android:digits="йцукенгшщзхъёфывапролджэячсмитьбю !?"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:hint="Введите текст для отображения"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCubeName"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <Button
+        android:id="@+id/saveTemplateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Сохранить"
+        android:textColor="@color/lighterBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTemplateText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
