@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -156,12 +157,21 @@ public class TemplatesFragment extends Fragment {
 
             }
         });
-        displayWeather.setOnClickListener(new View.OnClickListener() {
+//        displayWeather.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                CreateCubeFragment.sendToCube(russianCities.get(keysCities.get(spinner.getSelectedItemPosition())), CreateCubeFragment.urlForLocation, getContext());
+//            }
+//        });
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                //EditText locationET = view.findViewById(R.id.etLocation);
-                //String location = spinner.getSelectedItemPosition();
-                //CreateCubeFragment.sendToCube(location, CreateCubeFragment.urlForLocation, getContext());
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                CreateCubeFragment.sendToCube(russianCities.get(keysCities.get(position)), CreateCubeFragment.urlForLocation, getContext());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 

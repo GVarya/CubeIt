@@ -29,6 +29,9 @@ import java.util.ArrayList;
 
 public class CreateCubeFragment extends Fragment {
 
+//    static final String urlForLeds = "http://mucubes.local/cube?query1=";
+
+//    static final String urlForLocation = "http://mucubes.local/location?region=";
     static final String urlForLeds = "http://192.168.1.175:80/cube?query1=";
     static final String urlForLocation = "http://192.168.1.175:80/location?region=";
     RadioButton checkedLayer;
